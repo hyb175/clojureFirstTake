@@ -31,12 +31,7 @@
         (case c
           \[ (recur (inc x) (inc matchCount))
           \] (if (= matchCount 0) x (recur (inc x) (dec matchCount)))
-          (recur (inc x) matchCount)
-        )
-      )
-    )
-  )
-)
+          (recur (inc x) matchCount))))))
 
 (defn processLine [line]
   (loop [x 0 trackingStack ()]
